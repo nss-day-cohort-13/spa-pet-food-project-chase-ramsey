@@ -21,14 +21,17 @@ function buildDogCards(dataArray) {
 		var current = dataArray[i];
 		cardsHTML += "<article class='card'>" +
 								 "<header class='card-header'>" +
-								 "<h3>" + current.name + "</h3>" + "</header>" +
+								 "<h3>" + current.name + "</h3>" +
+								 "<h5>" + "All breeds" + "</h5>" + "</header>" +
 								 "<div class='card-body'>";
 		 for (var t = 0; t < current.types.length; t++) {
 		 	cardsHTML += "<section class='type'>" +
-									 "<p>" + current.types[t].type + "<p>";
+									 "<div class='type-title'>" + current.types[t].type + "</div>";
 				for (var v = 0; v < current.types[t].volumes.length; v++) {
-					 cardsHTML += "<p>" + current.types[t].volumes[v].name + "</p>" +
-					 							"<p>" + current.types[t].volumes[v].price + "<p>";
+					 cardsHTML += "<div class='type-data'>" +
+					 							"<p>" + current.types[t].volumes[v].name + "</p>" +
+					 							"<p>" + current.types[t].volumes[v].price + "<p>" +
+					 							"</div>";
 					}
 		 cardsHTML += "</section>"
 		 }
@@ -41,20 +44,22 @@ function buildDogCards(dataArray) {
 // Create a function that formats cat cards
 
 function buildCatCards(dataArray) {
-	var cardsHTML = "";
+var cardsHTML = "";
 	for (var i = 0; i < dataArray.length; i++) {
 		var current = dataArray[i];
 		cardsHTML += "<article class='card'>" +
 								 "<header class='card-header'>" +
-								 "<h3>" + current.name + "</h3>" + "</header>" +
-								 "<div class='card-body'>" +
-								 "<h4>" + current.breeds + "</h4>";
+								 "<h3>" + current.name + "</h3>" +
+								 "<h5>" + current.breeds + "</h5>" + "</header>" +
+								 "<div class='card-body'>";
 		 for (var t = 0; t < current.types.length; t++) {
 		 	cardsHTML += "<section class='type'>" +
-	  							 "<p>" + current.types[t].type + "<p>";
+									 "<div class='type-title'>" + current.types[t].type + "</div>";
 				for (var v = 0; v < current.types[t].volumes.length; v++) {
-					 cardsHTML += "<p>" + current.types[t].volumes[v].name + "</p>" +
-					 							"<p>" + current.types[t].volumes[v].price + "<p>";
+					 cardsHTML += "<div class='type-data'>" +
+					 							"<p>" + current.types[t].volumes[v].name + "</p>" +
+					 							"<p>" + current.types[t].volumes[v].price + "<p>" +
+					 							"</div>";
 					}
 		 cardsHTML += "</section>"
 		 }
