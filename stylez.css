@@ -65,6 +65,12 @@ li {
 	min-height: 100vh;
 }
 
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 /*-========== Card styles ==========-*/
 
 .card {
@@ -81,6 +87,10 @@ li {
 
 h3 {
 	margin: 50px 20px;
+}
+
+.type {
+	display: inline-block;
 }
 
 
