@@ -81,7 +81,7 @@ li {
 }
 
 .card-header {
-	width: 200px;
+	width: 100%;
 	text-align: center;
 }
 
@@ -91,6 +91,7 @@ h3 {
 
 .type {
 	display: inline-block;
+	margin: 10px;
 }
 
 
