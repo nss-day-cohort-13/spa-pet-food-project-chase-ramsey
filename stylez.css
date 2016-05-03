@@ -10,9 +10,15 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	background: #DE6449;
+	background: #57A773;
 	margin: 0;
 	padding: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: #4062BB;
 }
 
 
@@ -24,7 +30,7 @@ body {
 }
 
 .header-title {
-	background: #407899;
+	background: #4062BB;
 	border-radius: 5px 5px 0 0;
 	font-size: 2em;
 	text-align: center;
@@ -42,6 +48,7 @@ nav {
 	text-align: center;
 	border-bottom: 2px solid #000;
 	padding: 10px;
+	background: #fff;
 }
 
 ul {
@@ -59,28 +66,76 @@ li {
 /*-__________ Main content area styles __________-*/
 
 .main-content {
-	background: #fff;
+	background: #93928D;
 	margin: 30px;
 	border-radius: 5px;
 	min-height: 100vh;
+	box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 /*-========== Card styles ==========-*/
 
 .card {
 	margin: 20px;
-	padding: 10px;
 	float: left;
-	border: 1px solid #000;
+	width: 400px;
+	height: 300px;
+	box-shadow: 0 2px 4px rgba(0,0,0,.2);
+	border-radius: 5px;
 }
 
+/* .card-header and children */
+
 .card-header {
-	width: 200px;
+	width: 100%;
+	height: 30%;
 	text-align: center;
+	border-bottom: 2px solid #000;
+	margin: 0;
+	padding: 20px;
+	background: #4062BB;
+	color: #fff;
 }
 
 h3 {
-	margin: 50px 20px;
+	font-size: 1.5em;
+	margin: 0 auto 10px;
+}
+
+h5 {
+	margin: 0 auto;
+	font-weight: 400;
+}
+
+/* .card-body and children */
+
+.card-body {
+	background: #fff;
+	height: 70%;
+	position: relative;
+}
+
+.type {
+	display: inline-block;
+	margin: 10px;
+	position: relative;
+	bottom: -35px;
+}
+
+.type-title {
+	display: block;
+	font-weight: 600;
+}
+
+.type-data {
+	display: inline-block;
+	margin-right: 20px;
 }
 
 
